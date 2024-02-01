@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/icon-chat.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resetCSS.css" />
+    <title>chat</title>
+  </head>
+  <body>
+    <div class="wrapper-chat" id="wrapper-chat">
+      <div class="main-buttons">
+        <button class="settings-button" id="open-settings">
+          <img src="./assets/icon-settings.png" alt="settings" class="settings-img" />
+        </button>
+        <button class="new-message" id="new-message">
+          <img src="./assets/icon-newmes.png" alt="new message" class="new-message-img" />
+          <span class="new-message-text">1</span>
+        </button>
+        <button class="search-message" id="search-message">
+          <img src="./assets/icon-search.png" alt="search" class="search-img" />
+        </button>
+        <button class="exit-button" id="exit-button">
+          <img src="./assets/icon-exit.png" alt="exit" class="exit-img" />
+        </button>
+      </div>
+      <div class="chat-window">
+        <div class="chat-body">
+          <button class="down-arrow" id="down-arrow">
+            <img src="./assets/icon-down.png" alt="down" class="down-img" />
+          </button>
+          <div class="chat" id="chat-container">
+            <template id="msg">
+              <div class="other-message">
+                <div class="message-block" id="message-block">
+                  <div class="message__container">
+                    <span class="message-name" id="message-name"></span>
+                    <span class="message-text" id="message-text"></span>
+                  </div>
+                  <span class="message-time" id="message-time"></span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="#" id="message-form" class="message-form">
+          <label for="message-input" class="input-label">
+            <button class="emoji-button" id="emoji-button">
+              <img src="./assets/icon-emoji.png" alt="emoji" class="emoji-img" />
+            </button>
+            <input type="text" id="message-input" class="message-input-field" placeholder="Сообщение.." required />
+            <button type="submit" class="send-button" id="send-btn">
+              <img src="./assets/icon-addmsg.png" alt="send" class="send-img" />
+            </button>
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="settings-popup" id="settings-popup">
+      <div class="settings-popup__body">
+        <div class="settings-popup__content">
+          <div class="popup__header">
+            <h2 class="popup__title">Настройки</h2>
+            <button class="popup__close-button" id="close-settings">
+              <img src="./assets/icon-close.png" alt="close" class="close-img" />
+            </button>
+          </div>
+          <div class="popup__content">
+            <h3 class="popup__subtitle">Имя</h3>
+            <form action="#" class="settings-form">
+              <label class="settings-form__label">
+                <input type="text" class="settings-form__input" id="change-name-input" placeholder="Имя..." />
+                <button class="settings-form__button" id="change-name">
+                  <img src="./assets/icon-send.png" alt="" class="form-img" />
+                </button>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="authorization-popup" id="authorization-popup">
+      <div class="authorization-popup__body">
+        <div class="authorization-popup__content">
+          <div class="popup__header">
+            <h2 class="popup__title">Авторизация</h2>
+            <button class="popup__close-button" id="close-authorization">
+              <img src="./assets/icon-close.png" alt="close" class="close-img" />
+            </button>
+          </div>
+          <div class="popup__content authorization-content">
+            <h3 class="popup__subtitle">Почта:</h3>
+            <form action="#" class="authorization-form">
+              <label class="authorization-form__label" for="email-input">
+                <input type="email" name="email" class="authorization-form__input" id="email-input" placeholder="Почта..." required />
+              </label>
+              <button class="authorization-form__button" id="request-code-button">Получить код</button>
+              <button class="authorization-form__button" id="open-mail-confirmation">Ввести код</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mail-confirmation-popup" id="mail-confirmation-popup">
+      <div class="mail-confirmation-popup__body">
+        <div class="mail-confirmation-popup__content">
+          <div class="popup__header">
+            <h2 class="popup__title">Подтверждение</h2>
+            <button class="popup__close-button" id="close-mail-confirmation">
+              <img src="./assets/icon-close.png" alt="close" class="close-img" />
+            </button>
+          </div>
+          <div class="popup__content">
+            <h3 class="popup__subtitle">Код:</h3>
+            <form action="#" class="mail-confirmation-form">
+              <label class="mail-confirmation-form__label">
+                <input type="text" class="mail-confirmation-form__input" id="code-input" placeholder="Код..." />
+                <button class="mail-confirmation-form__button" id="log-in">Войти</button>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "de-d",
+  "version": "1.0.0",
+  "description": "tschat",
+  "main": "main.js",
+  "scripts": {
+    "test": "start",
+    "lint": "eslint .",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "author": "de-d",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint": "^8.51.0",
+    "parcel": "^2.10.0",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^3.0.4",
+    "emoji-mart": "^5.5.2",
+    "js-cookie": "^3.0.5"
+  }
+}
